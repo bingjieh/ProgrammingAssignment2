@@ -1,5 +1,6 @@
 ## Caching the Inverse of a Matrix:
 ## This function creates a special "matrix" that can cache its inverse.
+
 makeCacheMatrix <- function(x=matrix()) {
         ## The MatrInve will store the inversion of the matrix
         MatrInve <- NULL  
@@ -9,6 +10,7 @@ makeCacheMatrix <- function(x=matrix()) {
                 ## Inicialize MatrInve to NULL
                 MatrInve <<- NULL 
         }
+        
         # Get the value of the matrix
         get <- function() x
         ## Set inverse of the matrix and store in MatrInve
@@ -20,6 +22,7 @@ makeCacheMatrix <- function(x=matrix()) {
               setInverse=setInverse, 
               getInverse=getInverse)
 }
+
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
@@ -39,4 +42,5 @@ cacheSolve <- function(x, ...) {
         x$setInverse(MatrInve)
         ## Display result in cosole
         MatrInve
+        
 }
